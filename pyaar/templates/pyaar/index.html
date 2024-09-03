@@ -1,378 +1,682 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
 {% load static %}
-{% block title %}
-<title>Pyaar Foundation</title>
-{% endblock %}
-{% block navbar %}
-<li class="nav-item active"><a href="{% url 'index' %}" class="nav-link">Home</a></li>
-<li class="nav-item"><a href="{% url 'about' %}" class="nav-link">About</a></li>
-<li class="nav-item"><a href="{% url 'causes' %}" class="nav-link">Causes</a></li>
-<li class="nav-item"><a href="{% url 'donate' %}" class="nav-link">Donate</a></li>
-<li class="nav-item"><a href="{% url 'blog' %}" class="nav-link">Blog</a></li>
-<li class="nav-item"><a href="{% url 'gallery' %}" class="nav-link">Gallery</a></li>
-<li class="nav-item"><a href="{% url 'event' %}" class="nav-link">Events</a></li>
-<li class="nav-item"><a href="{% url 'contact' %}" class="nav-link">Contact</a></li>
-{% endblock %}
-{% block first %}
-<div class="hero-wrap" style="background-image: url({% static 'images/bg_7.jpg' %});" data-stellar-background-ratio="0.5">
-    <div class="overlay"></div>
-    <div class="container">
-        <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
-            <div class="col-md-7 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
-                <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Doing Nothing is Not An Option of Our Life</h1>
-                <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><a href="https://vimeo.com/45830194" class="btn btn-white btn-outline-white px-4 py-3 popup-vimeo"><span class="icon-play mr-2"></span>Watch Video</a></p>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="description" />
+    <meta name="keywords" content="keywords" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" />
+    <title>
+        Pyaar Foundation
+    </title>
+    <!-- styles-->
+    <link rel="stylesheet" href="{% static 'css/styles.min.css' %}" />
+    <!-- web-font loader-->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&display=swap');
+        </style>
+</head>
+
+<body>
+
+    <div class="page-wrapper">
+        <form method="post" action="./" id="form1">
+            <div class="aspNetHidden">
+                <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE"
+                    value="0F87haFXOyKLU6LI/V/RWeht3zN4joRef970Jh82pn4P0Y76PGbkXxGu5mvvEa3b0oT63R6NwP6pTRngGbGeWrSY1vTonADYAM03+O5aREs=" />
             </div>
-        </div>
-    </div>
-</div>
-{% endblock %}
-{% block content %}
-<section class="ftco-counter ftco-intro" id="section-counter">
-    <div class="container">
-        <div class="row no-gutters">
-            <div class="col-md-5 d-flex justify-content-center counter-wrap ftco-animate">
-                <div class="block-18 color-1 align-items-stretch">
-                    <div class="text">
-                        <span>Served Over</span>
-                        <strong class="number" data-number="1432805">0</strong>
-                        <span>Children in 190 countries in the world</span>
+
+            <div class="aspNetHidden">
+
+                <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
+            </div>
+
+
+            <!-- aside dropdown start-->
+            <div class="aside-dropdown">
+                <div class="aside-dropdown__inner">
+                    <span class="aside-dropdown__close">
+                        <svg class="icon">
+                            <use xlink:href="#close"></use>
+                        </svg></span>
+                    <div class="aside-dropdown__item d-lg-none d-block">
+                        <ul class="aside-menu">
+
+
+                            <li class="aside-menu__item"><a class="aside-menu__link"
+                                    href="Default.aspx"><span>Home</span></a></li>
+
+
+                            <li class="aside-menu__item aside-menu__item--has-child"><a class="aside-menu__link"
+                                    href="javascript:void(0);"><span>Adopt</span></a>
+                                <!-- sub menu start-->
+                                <ul class="aside-menu__sub-list">
+                                    <li><a href="adopt-dogs.aspx"><span>Lovely Dogs</span></a></li>
+                                    <li><a href="adopt-cats.aspx"><span>Kittens</span></a></li>
+                                    <li><a href="adopt-birds.aspx"><span>Special Care Birds</span></a></li>
+                                </ul>
+                                <!-- sub menu end-->
+                            </li>
+
+
+                            <li class="aside-menu__item aside-menu__item--has-child"><a class="aside-menu__link"
+                                    href="javascript:void(0);"><span>Causes</span></a>
+                                <!-- sub menu start-->
+                                <ul class="aside-menu__sub-list">
+                                    <li><a href="causes.html"><span>Causes 1</span></a></li>
+                                    <li><a href="causes_2.html"><span>Causes 2</span></a></li>
+                                    <li><a href="causes_3.html"><span>Causes 3</span></a></li>
+                                    <li><a href="cause-details.html"><span>Cause Details</span></a></li>
+                                </ul>
+                                <!-- sub menu end-->
+                            </li>
+                            <li class="aside-menu__item aside-menu__item--has-child"><a class="aside-menu__link"
+                                    href="javascript:void(0);"><span>Shop</span></a>
+                                <!-- sub menu start-->
+                                <ul class="aside-menu__sub-list">
+                                    <li><a href="shop.html"><span>Catalog Page</span></a></li>
+                                    <li><a href="shop-product.html"><span>Shop Product</span></a></li>
+                                    <li><a href="shop-cart.html"><span>Shop Cart</span></a></li>
+                                    <li><a href="shop-checkout.html"><span>Shop Checkout</span></a></li>
+                                    <li><a href="shop-account.html"><span>Shop Account</span></a></li>
+                                </ul>
+                                <!-- sub menu end-->
+                            </li>
+                            <li class="aside-menu__item"><a class="aside-menu__link"
+                                    href="contacts.aspx"><span>Contacts</span></a></li>
+
+                        </ul>
+                    </div>
+                    <div class="aside-dropdown__item">
+                        <!-- aside menu start-->
+
+                        <!-- aside menu end-->
+                        <div class="aside-inner"><span class="aside-inner__title">Email</span><a
+                                class="aside-inner__link"
+                                href="mailto:support@pyaar4petanity.org">support@pyaar4petanity.org</a></div>
+                        <div class="aside-inner"><span class="aside-inner__title">Phone numbers</span><a
+                                class="aside-inner__link" href="tel:+180012345678">+ 91 -942-256-7030</a></div>
+                        <ul class="aside-socials">
+                            <li class="aside-socials__item"><a class="aside-socials__link"
+                                    href="https://www.instagram.com/pyaar_rescue_shelter/" target="_blank"><i
+                                        class="fa fa-instagram" aria-hidden="true"></i></a></li>
+
+                            <li class="aside-socials__item"><a class="aside-socials__link aside-socials__link--active"
+                                    target="_blank"
+                                    href="https://twitter.com/pyaarfoundation?t=VssRVCSKdKY3slTBfg1LEA&s=09"><i
+                                        class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                            <li class="aside-socials__item"><a class="aside-socials__link"
+                                    href="https://www.facebook.com/petanity/" target="_blank"><i class="fa fa-facebook"
+                                        aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="aside-dropdown__item"><a class="button button--squared"
+                            href="donate.aspx"><span>Donate</span></a></div>
+                </div>
+            </div>
+            <!-- aside dropdown end-->
+
+
+
+            <!-- top bar start-->
+            <div class="top-bar d-none d-lg-block">
+                <div class="container-fluid">
+                    <div class="row align-items-end">
+                        <div class="col-lg-9">
+                            <a class="top-bar__link" href="tel:+180012345678">+ 91 -942-256-7030</a>
+                            <a class="top-bar__link"
+                                href="mailto:support@pyaar4petanity.org">support@pyaar4petanity.org</a>
+                        </div>
+                        <div class="col-lg-3 text-right">
+                            <ul class="socials">
+                                <li class="socials__item"><a class="socials__link"
+                                        href="https://www.facebook.com/petanity" target="_blank"><i
+                                            class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                <li class="socials__item"><a class="socials__link" href="#"><i class="fa fa-twitter"
+                                            aria-hidden="true"></i></a></li>
+                                <li class="socials__item"><a class="socials__link" href="#"><i class="fa fa-google-plus"
+                                            aria-hidden="true"></i></a></li>
+                                <li class="socials__item"><a class="socials__link" href="#"><i class="fa fa-instagram"
+                                            aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-                <div class="block-18 color-2 align-items-stretch">
-                    <div class="text">
-                        <h3 class="mb-4">Donate Money</h3>
-                        <p>Even the all-powerful Pointing has no control about the blind texts.</p>
-                        <p><a href="#" class="btn btn-white px-3 py-2 mt-2">Donate Now</a></p>
+            <!-- top bar end-->
+
+
+
+            <!-- header start-->
+            <header class="header header--front_3" style="padding: 0px 0px 0px 0;">
+                <div class="container-fluid">
+                    <div class="row no-gutters justify-content-between">
+                        <div class="col-auto d-flex align-items-center">
+                            <div class="dropdown-trigger d-none d-sm-block">
+                                <div class="dropdown-trigger__item"></div>
+                            </div>
+                            <div class="header-logo"><a class="header-logo__link" href="index.html">
+                                    <img class="header-logo__img" src="{% static 'img/logo_dark-removebg-preview.png' %}" alt="logo" /></a></div>
+                        </div>
+                        <div class="col-auto">
+                            <!-- main menu start-->
+                            <nav>
+                                <ul class="main-menu">
+
+
+                                    <li class="main-menu__item"><a class="main-menu__link"
+                                            href="Default.aspx"><span>Home</span></a></li>
+
+                                    <li class="main-menu__item main-menu__item--has-child"><a class="main-menu__link"
+                                            href="javascript:void(0);"><span>Adopt</span></a>
+                                        <!-- sub menu start-->
+                                        <ul class="main-menu__sub-list">
+                                            <li><a href="adopt-dogs.aspx"><span>Lovely Dogs</span></a></li>
+                                            <li><a href="adopt-cats.aspx"><span>Kittens</span></a></li>
+                                            <li><a href="adopt-birds.aspx"><span>Special Care Birds</span></a></li>
+                                        </ul>
+                                        <!-- sub menu end-->
+                                    </li>
+
+
+
+                                    <li class="main-menu__item"><a class="main-menu__link"
+                                            href="volunteer"><span>Volunteer</span></a></li>
+
+
+
+
+
+                                    <li class="main-menu__item main-menu__item--has-child"><a class="main-menu__link"
+                                            href="javascript:void(0);"><span>How you can Help</span></a>
+                                        <!-- sub menu start-->
+                                        <ul class="main-menu__sub-list">
+                                            <li><a href="thing-we-need.aspx"><span>THINGS WE NEED</span></a></li>
+
+                                            <li><a href="shop-product.html"><span>GIFT A DONATION</span></a></li>
+                                            <li><a href="Volunteer.aspx"><span>JOIN VOLUNTEER</span></a></li>
+
+                                            <li><a href="shop-checkout.html"><span>SUPPORT GAUSHALA</span></a></li>
+
+                                        </ul>
+                                        <!-- sub menu end-->
+                                    </li>
+                                    <li class="main-menu__item"><a class="main-menu__link"
+                                            href="contacts"><span>Contacts</span></a></li>
+
+                                </ul>
+                            </nav>
+                            <!-- main menu end-->
+                        </div>
+                        <div class="col-auto d-flex align-items-center">
+                            <!-- lang select start-->
+                            <ul class="lang-select">
+                                <li class="lang-select__item lang-select__item--active"><span>En</span>
+                                    <ul class="lang-select__sub-list">
+                                        <li><a href="#">French</a></li>
+                                        <li><a href="#">Spanish</a></li>
+                                        <li><a href="#">Deutsch</a></li>
+
+                                    </ul>
+                                </li>
+                            </ul>
+                            <!-- lang select end-->
+                            <a class="button button--squared" href="donate.aspx"><span>Donate</span></a>
+                            <div class="dropdown-trigger d-block d-sm-none">
+                                <div class="dropdown-trigger__item"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-                <div class="block-18 color-3 align-items-stretch">
-                    <div class="text">
-                        <h3 class="mb-4">Be a Volunteer</h3>
-                        <p>Even the all-powerful Pointing has no control about the blind texts.</p>
-                        <p><a href="#" class="btn btn-white px-3 py-2 mt-2">Be A Volunteer</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="ftco-section">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4 d-flex align-self-stretch ftco-animate">
-                <div class="media block-6 d-flex services p-3 py-4 d-block">
-                    <div class="icon d-flex mb-3"><span class="flaticon-donation-1"></span></div>
-                    <div class="media-body pl-4">
-                        <h3 class="heading">Make Donation</h3>
-                        <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 d-flex align-self-stretch ftco-animate">
-                <div class="media block-6 d-flex services p-3 py-4 d-block">
-                    <div class="icon d-flex mb-3"><span class="flaticon-charity"></span></div>
-                    <div class="media-body pl-4">
-                        <h3 class="heading">Become A Volunteer</h3>
-                        <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 d-flex align-self-stretch ftco-animate">
-                <div class="media block-6 d-flex services p-3 py-4 d-block">
-                    <div class="icon d-flex mb-3"><span class="flaticon-donation"></span></div>
-                    <div class="media-body pl-4">
-                        <h3 class="heading">Sponsorship</h3>
-                        <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="ftco-section bg-light">
-    <div class="container-fluid">
-        <div class="row justify-content-center mb-5 pb-3">
-            <div class="col-md-5 heading-section ftco-animate text-center">
-                <h2 class="mb-4">Our Causes</h2>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12 ftco-animate">
-                <div class="carousel-cause owl-carousel">
-                    <div class="item">
-                        <div class="cause-entry">
-                            <a href="#" class="img" style="background-image: url({% static 'images/cause-1.jpg' %});"></a>
-                            <div class="text p-3 p-md-4">
-                                <h3><a href="#">Clean water for the urban area</a></h3>
-                                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life</p>
-                                <span class="donation-time mb-3 d-block">Last donation 1w ago</span>
-                                <div class="progress custom-progress-success">
-                                    <div class="progress-bar bg-primary" role="progressbar" style="width: 28%" aria-valuenow="28" aria-valuemin="0" aria-valuemax="100"></div>
+            </header>
+            <!-- header end-->
+
+
+
+
+
+
+            <main class="main">
+
+
+
+
+
+
+                <!-- promo start-->
+                <section class="promo promo--front_3">
+                    <div class="promo-slider">
+                        <div class="promo-slider__item promo-slider__item--style-3">
+                            <picture>
+
+
+
+                                <source srcset="{% static 'img/Banner 02-a.jpg' %}" media="(min-width: 835px)" />
+                                <source srcset="{% static 'img/Banner 02-a.jpg' %}" media="(min-width: 376px)" />
+                                <img class="img--bg" src="{% static 'img/Banner 02-a.jpg' %}" alt="img" />
+                            </picture>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-xl-6 offset-xl-6 text-left">
+                                        <div class="align-container">
+                                            <div class="align-container__item">
+                                                <div class="promo-slider__wrapper-1">
+                                                    <h2 class="promo-slider__title"><span>We Help
+                                                            Animals</span><br /><span>Around the world</span></h2>
+                                                </div>
+                                                <div class="promo-slider__wrapper-2">
+                                                    <p class="promo-slider__subtitle">With the vision and mission of
+                                                        <strong style="color:white"> Pashu Rakhshanay Sadaiv tatpar -
+                                                            Petanity and animal rehabilitators Foundation _ chandrapur
+                                                        </strong> was founded in 2018 with an aim to save and serve
+                                                        every needy street animal to get a second chance to live a happy
+                                                        life. </p>
+                                                </div>
+                                                <div class="promo-slider__wrapper-3"><a
+                                                        class="button promo-slider__button button--primary"
+                                                        href="#">Discover</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <span class="fund-raised d-block">$12,000 raised of $30,000</span>
                             </div>
                         </div>
-                    </div>
-                    <div class="item">
-                        <div class="cause-entry">
-                            <a href="#" class="img" style="background-image: url({% static 'images/cause-2.jpg' %});"></a>
-                            <div class="text p-3 p-md-4">
-                                <h3><a href="#">Clean water for the urban area</a></h3>
-                                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life</p>
-                                <span class="donation-time mb-3 d-block">Last donation 1w ago</span>
-                                <div class="progress custom-progress-success">
-                                    <div class="progress-bar bg-primary" role="progressbar" style="width: 28%" aria-valuenow="28" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div class="promo-slider__item promo-slider__item--style-2">
+                            <picture>
+                                <source srcset="{% static 'img/Pyaar_Warriors.jpg' %}" media="(min-width: 835px)" />
+                                <source srcset="{% static 'img/Pyaar_Warriors.jpg' %}" media="(min-width: 376px)" /><img
+                                    class="img--bg" src="{% static 'img/Pyaar_Warriors.jpg' %}" alt="img" />
+                            </picture>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-xl-7">
+                                        <div class="align-container">
+                                            <div class="align-container__item">
+                                                <div class="promo-slider__wrapper-1">
+                                                    <h2 class="promo-slider__title"><span></span><br /><span></span>
+                                                    </h2>
+                                                </div>
+                                                <div class="promo-slider__wrapper-2">
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <span class="fund-raised d-block">$12,000 raised of $30,000</span>
                             </div>
                         </div>
-                    </div>
-                    <div class="item">
-                        <div class="cause-entry">
-                            <a href="#" class="img" style="background-image: url({% static 'images/cause-3.jpg' %});"></a>
-                            <div class="text p-3 p-md-4">
-                                <h3><a href="#">Clean water for the urban area</a></h3>
-                                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life</p>
-                                <span class="donation-time mb-3 d-block">Last donation 1w ago</span>
-                                <div class="progress custom-progress-success">
-                                    <div class="progress-bar bg-primary" role="progressbar" style="width: 28%" aria-valuenow="28" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div class="promo-slider__item promo-slider__item--style-1">
+                            <picture>
+                                <source srcset="{% static 'img/banner3.jpg' %}" media="(min-width: 835px)" />
+                                <source srcset="{% static 'img/banner3.jpg' %}" media="(min-width: 376px)" /><img class="img--bg"
+                                    src="{% static 'img/banner3.jpg' %}" alt="img" />
+                            </picture>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="align-container">
+                                            <div class="align-container__item">
+                                                <div class="promo-slider__wrapper-1">
+                                                    <h2 class="promo-slider__title"><span></span><br /><span></span>
+                                                    </h2>
+                                                </div>
+                                                <div class="promo-slider__wrapper-2">
+                                                    <p class="promo-slider__subtitle"></p>
+                                                </div>
+                                                <div class="promo-slider__wrapper-3"><a
+                                                        class="button promo-slider__button button--primary"
+                                                        href="#">Discover</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <span class="fund-raised d-block">$12,000 raised of $30,000</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- promo pannel start-->
+
+                    <!-- promo pannel end-->
+                    <!-- slider nav start-->
+                    <div class="slider__nav slider__nav--promo">
+                        <div class="promo-slider__count"></div>
+                        <div class="slider__arrows">
+                            <div class="slider__prev"><i class="fa fa-chevron-left" aria-hidden="true"></i>
+                            </div>
+                            <div class="slider__next"><i class="fa fa-chevron-right" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- slider nav end-->
+                </section>
+                <!-- promo end-->
+                <!-- about us start-->
+                <section class="section about-us background--brown">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6">
+                                <div class="heading heading--primary">
+                                    <h2 class="heading__title"><span>About</span> <span>Pyaar Foundation</span></h2>
+                                </div>
+                                <p><strong>" पशु रक्शनये सदैव तत्पर "</strong></p>
+                                <p>With the vision and mission of <strong> Pashu Rakhshanay Sadaiv tatpar - Petanity and
+                                        animal rehabilitators Foundation _ chandrapur </strong> was founded in 2018 with
+                                    an aim to save and serve every needy street animal to get a second chance to live a
+                                    happy life.</p>
+                                <p><strong>HUMAN INVOLVEMENT</strong></p>
+                                <p>On the counter part Pyaar foundation always succeeded in reducing human-animal
+                                    conflict by generating awareness on various animal issues .
+                                    On an average every year thousands of lives get a new quality life to exist at our
+                                    rehabilitation shelter</p><a class="button button--primary" href="about.html">More
+                                    About</a>
+                            </div>
+                            <div class="col-lg-6 col-xl-5 offset-xl-1">
+
+
+
+
+                                <div class="info-box"><img class="img--bg" src="{% static 'img/02-1.jpg' %}" alt="img" />
+                                    <h4 class="info-box__title">We are Awesome Volounteer Team</h4>
+                                    <p>Energetic and enthusiastic every volunteer at Pyaar Foundation is a reason for a
+                                        smile on our Rescued babies at shelter their involvement is the only energy with
+                                        us which always keep us awaken 24×7 to give the innocence a reason to smile.</p>
+                                    <a class="info-box__link" href="Volunteer">Become a volounteer</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- about us end-->
+
+
+
+
+                <!-- section start-->
+                <section class="section" style="padding:70px !important;">
+                    <div class="container">
+                        <div class="row margin-bottom">
+                            <div class="col-12">
+                                <div class="heading heading--primary heading--center">
+                                    <h2 class="heading__title"><span>We do it</span> <span>for all Animals</span></h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row offset-margin">
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="icon-item">
+                                    <div class="icon-item__img"><img src="{% static 'img/vaccination.png' %}" alt="icon" /></div>
+                                    <div class="icon-item__text">
+                                        <p style="font-size: 16px;">Vaccination Camps</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="icon-item">
+                                    <div class="icon-item__img"><img src="{% static 'img/awarness.png' %}" alt="icon" /></div>
+                                    <div class="icon-item__text">
+                                        <p style="font-size: 16px;">Awarness camps</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="icon-item">
+                                    <div class="icon-item__img"><img src="{% static 'img/grooming.png' %}" alt="icon" /></div>
+                                    <div class="icon-item__text">
+                                        <p style="font-size: 16px;">Grooming Services</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="icon-item">
+                                    <div class="icon-item__img"><img src="{% static 'img/day_care.png' %}" alt="icon" /></div>
+                                    <div class="icon-item__text">
+                                        <p style="font-size: 16px;">Day care Services</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="icon-item">
+                                    <div class="icon-item__img"><img src="{% static 'img/justice.png' %}" alt="icon" /></div>
+                                    <div class="icon-item__text">
+                                        <p style="font-size: 16px;">Legal Awarness</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="icon-item">
+                                    <div class="icon-item__img"><img src="{% static 'img/adoption.png' %}" alt="icon" /></div>
+                                    <div class="icon-item__text">
+                                        <p style="font-size: 16px;">Adoption camps</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="icon-item">
+                                    <div class="icon-item__img"><img src="{% static 'img/volounteers.png' %}" alt="icon" /></div>
+                                    <div class="icon-item__text">
+                                        <p style="font-size: 16px;">Best Volounteers</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="icon-item">
+                                    <div class="icon-item__img"><img src="{% static 'img/donate.png' %}" alt="icon" /></div>
+                                    <div class="icon-item__text">
+                                        <p style="font-size: 16px;">Donation Around the World</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- section end-->
+
+
+
+
+
+
+                <!-- section start-->
+                <section class="section" style="padding:0px !important;">
+
+                    <div class="projects-slider">
+                        <div class="projects-slider__item">
+                            <div
+                                class="projects-masonry__item projects-masonry__item--primary projects-masonry__item--height-2">
+                                <div class="projects-masonry__img"><img class="img--bg" src="{% static 'img/Calf_Section.jpg' %}"
+                                        alt="img" />
+                                    <div class="projects-masonry__inner">
+
+                                        <h3 class="projects-masonry__title"> <a href="cause-details.html">Gaushala</a>
+                                        </h3>
+                                        <p>गाय के महत्व को जानकर ही हिन्दू धर्म में इसे माता का दर्जा दिया गया है. गाय
+                                            हर प्रकार के सुख को प्रदान करने वाली होती हैं.</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="projects-slider__item">
+                            <div
+                                class="projects-masonry__item projects-masonry__item--primary projects-masonry__item--height-2">
+                                <div class="projects-masonry__img"><img class="img--bg" src="{% static 'img/Dogs_Section.jpg' %}"
+                                        alt="img" />
+                                    <div class="projects-masonry__inner">
+
+                                        <h3 class="projects-masonry__title"> <a href="cause-details.html">Dogs
+                                                Section</a></h3>
+                                        <p>At Pyaar We provide treatment for injured dogs which got in road accident,
+                                            dogs attack with our specilised doctors team. </p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="projects-slider__item">
+                            <div
+                                class="projects-masonry__item projects-masonry__item--primary projects-masonry__item--height-2">
+                                <div class="projects-masonry__img"><img class="img--bg" src="{% static 'img/Cats_Section.jpg' %}"
+                                        alt="img" />
+                                    <div class="projects-masonry__inner">
+
+                                        <h3 class="projects-masonry__title"> <a href="cause-details.html">Cats
+                                                Section</a></h3>
+                                        <p>At Pyaar We provide treatment for injured cats which got in accident, dogs
+                                            attack with our specilised doctors team. </p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="projects-slider__item">
+                            <div
+                                class="projects-masonry__item projects-masonry__item--primary projects-masonry__item--height-2">
+                                <div class="projects-masonry__img"><img class="img--bg" src="{% static 'img/Rabit_Section.jpg' %}"
+                                        alt="img" />
+                                    <div class="projects-masonry__inner">
+
+                                        <h3 class="projects-masonry__title"> <a href="cause-details.html">Rabit
+                                                Section</a></h3>
+                                        <p>As we know people are entuastics to get pets at there home from taking there
+                                            naturelar habitual so sometimes there are unable to take care and surrender
+                                            to us.</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="projects-slider__item">
+                            <div
+                                class="projects-masonry__item projects-masonry__item--primary projects-masonry__item--height-2">
+                                <div class="projects-masonry__img"><img class="img--bg" src="{% static 'img/Duck_Section.jpg' %}"
+                                        alt="img" />
+                                    <div class="projects-masonry__inner">
+
+                                        <h3 class="projects-masonry__title"> <a href="cause-details.html">Duck
+                                                Section</a></h3>
+                                        <p>Rockweed gunnel; candlefish mail-cheeked fish, yellowtail snapper cuskfish
+                                            elasmobranch seamoth triggerfish gar </p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- section end-->
+
+
+
+            </main>
+
+
+            <!-- footer front_3 start-->
+            <footer class="footer footer--front_3">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="footer-logo"><a class="footer-logo__link" href="Default.aspx">
+                                    <img class="footer-logo__img" src="{% static 'img/White_Logo.png' %}" alt="logo" /></a></div>
+                            <div class="footer-contacts">
+                                <p class="footer-contacts__address">Pyaar Foundation,beside VG lawn & Foods, Datala Rd,
+                                    near Balaji Mandir, Chandrapur, Maharashtra 442401</p>
+                                <p class="footer-contacts__phone">Phone: <a href="tel:+ 91 -942-256-7030">+ 91
+                                        -942-256-7030</a></p>
+                                <p class="footer-contacts__mail">Email: <a
+                                        href="mailto:support@pyaar4petanity.org">support@pyaar4petanity.org</a></p>
+                            </div>
+                            <!-- footer socials start-->
+                            <ul class="footer-socials">
+                                <li class="footer-socials__item"><a class="footer-socials__link" href="#"><i
+                                            class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                <li class="footer-socials__item"><a class="footer-socials__link" href="#"><i
+                                            class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                <li class="footer-socials__item"><a class="footer-socials__link" href="#"><i
+                                            class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                                <li class="footer-socials__item"><a class="footer-socials__link" href="#"><i
+                                            class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                            </ul>
+                            <!-- footer socials end-->
+                        </div>
+                        <div class="col-lg-8">
+                            <!-- footer nav start-->
+                            <nav>
+                                <ul class="footer-menu">
+                                    <li class="footer-menu__item footer-menu__item--active"><a class="footer-menu__link"
+                                            href="Default.aspx">Home Page</a></li>
+                                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Blog & News</a>
+                                    </li>
+                                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Donations</a>
+                                    </li>
+                                    <li class="footer-menu__item"><a class="footer-menu__link" href="media.aspx">Media
+                                            Coverage</a></li>
+                                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">About Us</a>
+                                    </li>
+                                    <li class="footer-menu__item"><a class="footer-menu__link"
+                                            href="contacts.aspx">Contact Us</a></li>
+                                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Animals</a></li>
+                                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Madicine</a>
+                                    </li>
+                                    <li class="footer-menu__item"><a class="footer-menu__link"
+                                            href="Volunteer.aspx">Volunteer</a></li>
+                                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Social Cause</a>
+                                    </li>
+                                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Legal
+                                            Awareness</a></li>
+                                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Food</a></li>
+                                    <li class="footer-menu__item"><a class="footer-menu__link"
+                                            href="causes.aspx">Causes</a></li>
+                                    <li class="footer-menu__item"><a class="footer-menu__link"
+                                            href="#">Documentation</a></li>
+                                    <li class="footer-menu__item"><a class="footer-menu__link"
+                                            href="adoption-guide.aspx">Adoption Guide</a></li>
+                                    <li class="footer-menu__item"><a class="footer-menu__link"
+                                            href="#">Documentation</a></li>
+                                </ul>
+                            </nav>
+                            <!-- footer nav end-->
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__lower">
+                    <div class="container">
+                        <div class="row align-items-baseline">
+                            <div class="col-md-6 col-xl-7">
+                                <p class="footer-copyright">© 2022 PETANITY AND ANIMAL REHABILITATORS FOUNDATION
+                                    CHANDRAPUR</p>
+                            </div>
+                            <div class="col-md-6 col-xl-5">
+                                <div class="footer__form">
+                                    <input class="footer__form-input" type="email" placeholder="Enter your E-mail" />
+                                    <button class="footer__form-submit button button--primary"
+                                        type="submit">Subscribe</button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            </footer>
+            <!-- footer front_3 end-->
+            <!-- libs-->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+            <script src="{% static 'js/libs.min.js' %}"></script>
+            <!-- scripts-->
+            <script src="{% static 'js/common.min.js' %}"></script>
+        </form>
     </div>
-</section>
-<section class="ftco-section">
-    <div class="container">
-        <div class="row justify-content-center mb-5 pb-3">
-            <div class="col-md-7 heading-section ftco-animate text-center">
-                <h2 class="mb-4">Latest Donations</h2>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-4 d-flex mb-sm-4 ftco-animate">
-                <div class="staff">
-                    <div class="d-flex mb-4">
-                        <div class="img" style="background-image: url({% static 'images/person_1.jpg' %});"></div>
-                        <div class="info ml-4">
-                            <h3><a href="teacher-single.html">Ivan Jacobson</a></h3>
-                            <span class="position">Donated Just now</span>
-                            <div class="text">
-                                <p>Donated <span>$300</span> for <a href="#">Children Needs Food</a></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 d-flex mb-sm-4 ftco-animate">
-                <div class="staff">
-                    <div class="d-flex mb-4">
-                        <div class="img" style="background-image: url({% static 'images/person_2.jpg' %});"></div>
-                        <div class="info ml-4">
-                            <h3><a href="teacher-single.html">Ivan Jacobson</a></h3>
-                            <span class="position">Donated Just now</span>
-                            <div class="text">
-                                <p>Donated <span>$150</span> for <a href="#">Children Needs Food</a></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 d-flex mb-sm-4 ftco-animate">
-                <div class="staff">
-                    <div class="d-flex mb-4">
-                        <div class="img" style="background-image: url({% static 'images/person_3.jpg' %});"></div>
-                        <div class="info ml-4">
-                            <h3><a href="teacher-single.html">Ivan Jacobson</a></h3>
-                            <span class="position">Donated Just now</span>
-                            <div class="text">
-                                <p>Donated <span>$250</span> for <a href="#">Children Needs Food</a></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="ftco-gallery">
-    <div class="d-md-flex">
-        <a href="{% static 'images/cause-2.jpg' %}" class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate" style="background-image: url({% static 'images/cause-2.jpg' %});">
-            <div class="icon d-flex justify-content-center align-items-center">
-                <span class="icon-search"></span>
-            </div>
-        </a>
-        <a href="{% static 'images/cause-3.jpg' %}" class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate" style="background-image: url({% static 'images/cause-3.jpg' %});">
-            <div class="icon d-flex justify-content-center align-items-center">
-                <span class="icon-search"></span>
-            </div>
-        </a>
-        <a href="{% static 'images/cause-4.jpg' %}" class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate" style="background-image: url({% static 'images/cause-4.jpg' %});">
-            <div class="icon d-flex justify-content-center align-items-center">
-                <span class="icon-search"></span>
-            </div>
-        </a>
-        <a href="{% static 'images/cause-5.jpg' %}" class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate" style="background-image: url({% static 'images/cause-5.jpg' %});">
-            <div class="icon d-flex justify-content-center align-items-center">
-                <span class="icon-search"></span>
-            </div>
-        </a>
-    </div>
-</section>
-<section class="ftco-section">
-    <div class="container">
-        <div class="row justify-content-center mb-5 pb-3">
-            <div class="col-md-7 heading-section ftco-animate text-center">
-                <h2 class="mb-4">Recent from blog</h2>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-            </div>
-        </div>
-        <div class="row d-flex">
-            <div class="col-md-4 d-flex ftco-animate">
-                <div class="blog-entry align-self-stretch">
-                    <a href="blog-single.html" class="block-20" style="background-image: url({% static 'images/image_1.jpg' %});">
-                    </a>
-                    <div class="text p-4 d-block">
-                        <div class="meta mb-3">
-                            <div><a href="#">Sept 10, 2018</a></div>
-                            <div><a href="#">Admin</a></div>
-                            <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-                        </div>
-                        <h3 class="heading mt-3"><a href="#">Hurricane Irma has devastated Florida</a></h3>
-                        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 d-flex ftco-animate">
-                <div class="blog-entry align-self-stretch">
-                    <a href="blog-single.html" class="block-20" style="background-image: url({% static 'images/image_2.jpg' %});">
-                    </a>
-                    <div class="text p-4 d-block">
-                        <div class="meta mb-3">
-                            <div><a href="#">Sept 10, 2018</a></div>
-                            <div><a href="#">Admin</a></div>
-                            <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-                        </div>
-                        <h3 class="heading mt-3"><a href="#">Hurricane Irma has devastated Florida</a></h3>
-                        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 d-flex ftco-animate">
-                <div class="blog-entry align-self-stretch">
-                    <a href="blog-single.html" class="block-20" style="background-image: url({% static 'images/image_3.jpg' %});">
-                    </a>
-                    <div class="text p-4 d-block">
-                        <div class="meta mb-3">
-                            <div><a href="#">Sept 10, 2018</a></div>
-                            <div><a href="#">Admin</a></div>
-                            <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-                        </div>
-                        <h3 class="heading mt-3"><a href="#">Hurricane Irma has devastated Florida</a></h3>
-                        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="ftco-section bg-light">
-    <div class="container">
-        <div class="row justify-content-center mb-5 pb-3">
-            <div class="col-md-7 heading-section ftco-animate text-center">
-                <h2 class="mb-4">Our Latest Events</h2>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4 d-flex ftco-animate">
-                <div class="blog-entry align-self-stretch">
-                    <a href="blog-single.html" class="block-20" style="background-image: url({% static 'images/event-1.jpg' %});">
-                    </a>
-                    <div class="text p-4 d-block">
-                        <div class="meta mb-3">
-                            <div><a href="#">Sep. 10, 2018</a></div>
-                            <div><a href="#">Admin</a></div>
-                            <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-                        </div>
-                        <h3 class="heading mb-4"><a href="#">World Wide Donation</a></h3>
-                        <p class="time-loc"><span class="mr-2"><i class="icon-clock-o"></i> 10:30AM-03:30PM</span> <span><i class="icon-map-o"></i> Venue Main Campus</span></p>
-                        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-                        <p><a href="event.html">Join Event <i class="ion-ios-arrow-forward"></i></a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 d-flex ftco-animate">
-                <div class="blog-entry align-self-stretch">
-                    <a href="blog-single.html" class="block-20" style="background-image: url({% static 'images/event-2.jpg' %});">
-                    </a>
-                    <div class="text p-4 d-block">
-                        <div class="meta mb-3">
-                            <div><a href="#">Sep. 10, 2018</a></div>
-                            <div><a href="#">Admin</a></div>
-                            <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-                        </div>
-                        <h3 class="heading mb-4"><a href="#">World Wide Donation</a></h3>
-                        <p class="time-loc"><span class="mr-2"><i class="icon-clock-o"></i> 10:30AM-03:30PM</span> <span><i class="icon-map-o"></i> Venue Main Campus</span></p>
-                        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-                        <p><a href="event.html">Join Event <i class="ion-ios-arrow-forward"></i></a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 d-flex ftco-animate">
-                <div class="blog-entry align-self-stretch">
-                    <a href="blog-single.html" class="block-20" style="background-image: url({% static 'images/event-3.jpg' %});">
-                    </a>
-                    <div class="text p-4 d-block">
-                        <div class="meta mb-3">
-                            <div><a href="#">Sep. 10, 2018</a></div>
-                            <div><a href="#">Admin</a></div>
-                            <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-                        </div>
-                        <h3 class="heading mb-4"><a href="#">World Wide Donation</a></h3>
-                        <p class="time-loc"><span class="mr-2"><i class="icon-clock-o"></i> 10:30AM-03:30PM</span> <span><i class="icon-map-o"></i> Venue Main Campus</span></p>
-                        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-                        <p><a href="event.html">Join Event <i class="ion-ios-arrow-forward"></i></a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="ftco-section-3 img" style="background-image: url({% static 'images/bg_3.jpg' %});">
-    <div class="overlay"></div>
-    <div class="container">
-        <div class="row d-md-flex">
-            <div class="col-md-6 d-flex ftco-animate">
-                <div class="img img-2 align-self-stretch" style="background-image: url({% static 'images/bg_4.jpg' %});"></div>
-            </div>
-            <div class="col-md-6 volunteer pl-md-5 ftco-animate">
-                <h3 class="mb-3">Be a volunteer</h3>
-                <form action="#" class="volunter-form">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Your Name">
-                    </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Your Email">
-                    </div>
-                    <div class="form-group">
-                        <textarea name="" id="" cols="30" rows="3" class="form-control" placeholder="Message"></textarea>
-                    </div>
-                    <div class="form-group">
-                        <input type="submit" value="Send Message" class="btn btn-white py-3 px-5">
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</section>
-{% endblock %}
+    <script src="https://cdn.botpress.cloud/webchat/v2.1/inject.js"></script>
+    <script src="https://mediafiles.botpress.cloud/16975185-83b2-419a-b530-f1480bc1f3b3/webchat/v2.1/config.js"></script>
+</body>
+
+</html>
